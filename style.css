@@ -217,6 +217,8 @@ body {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
+    border:2px solid green;
+    gap:1rem
 }
 
 .my-education-section h2{
@@ -231,9 +233,66 @@ body {
     text-shadow: #696969 2px 0 10px;
 }
 
+.individual-education-container {
+    padding: var(--primary-element-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:0.5rem;
+}
+.individual-education-container h3{
+        font-family: "Funnel Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 1.65rem;
+        color: #ffeac1;
+}
+.individual-education-container h5{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: #adadad;
+    font-size:1rem;
+}
+.individual-education-container span{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: #ffffff;
+    font-size:0.8rem;
+}
+.individual-education-container p{
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: #ffffff;
+    font-size:0.8rem;
+    text-align: justify;
+}
+
+.individual-education-container strong{
+    font-weight:600;
+    font-size:0.8rem;
+}
+
+.main-education-container {
+    padding-left:2rem;
+}
 
 
-/* Media Query for header and nav container */
+
+
 @media screen and (min-width:768px) {
     .nav-container ul{
         display: flex;
@@ -275,8 +334,6 @@ body {
         transform: scale(1.04);
     }
 
-
-
     .hero-image{
         display: block;
         height: 260px;
@@ -304,6 +361,10 @@ body {
         transform: scale(1.2);
         box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px;
         
+    }
+
+    .education-description-container p{
+        max-width: 50%;
     }
 } 
 
