@@ -217,12 +217,12 @@ body {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-    border:2px solid green;
     gap:1rem
 }
 
 .my-education-section h2{
     padding: var(--primary-element-padding);
+    margin: 0 auto;
     font-size:2rem;
     font-family: "Funnel Sans", sans-serif;
     font-optical-sizing: auto;
@@ -291,7 +291,74 @@ body {
 }
 
 
+/* This is the project section */
+.projects-section {
+    margin-top: var(--primary-element-margin);
+    padding: var(--primary-element-padding);
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    gap:1rem;
+}
 
+.projects-section h2{
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.9rem;
+    text-shadow: #696969 2px 0 10px;
+    color: #fff;
+    margin:0 auto;
+}
+
+/* Code for projects grid */
+.projects-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: var(--primary-element-padding);
+}
+
+/* Styling individual project cards */
+.individual-project-container {
+    background-color: #2c2c2c;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    transition: transform 200ms, box-shadow 200ms;
+    display: flex;
+    flex-direction:column;
+    gap: 1rem;
+}
+
+.individual-project-container a:hover {
+    color: #dbdbdb;
+}
+
+.individual-project-container:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 10px 20px;
+}
+
+.individual-project-container h3 {
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.individual-project-container p {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #ffffff;
+}
 
 @media screen and (min-width:768px) {
     .nav-container ul{
@@ -365,7 +432,7 @@ body {
 
     .education-description-container p{
         max-width: 50%;
-    }
+    }  
 } 
 
 
