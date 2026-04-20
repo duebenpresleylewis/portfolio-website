@@ -23,7 +23,28 @@ body {
 
 /* Header Related Stuff */
 .header-container{
-    width: 100%;
+    /* width: 100%; */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Transparent gradient */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.1)
+    );
+
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+
+    /* Smooth bottom fade instead of <hr> */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-container.scrolled {
+    background: rgba(0, 0, 0, 0.60);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav-container{
@@ -106,21 +127,9 @@ body {
     transition: all 0.3s ease;
 }
 
-.nav-items:hover {
-    color:#fff;
-    text-shadow: #5f5f5f 2px 0 10px;
-}
-
-.header-container hr {
-    width: 80%;
-    margin: 0 auto;
-}
-
-
 /* Main Container related designing */
 .main-container {
     padding: var(--primary-element-padding);
-    margin-top: var(--primary-element-margin);
     width: 100%;
 }
 
@@ -132,27 +141,29 @@ body {
     justify-content: space-between;
 }
 
-.hero-section h1 {
+#hero-heading {
     text-align: center;
-    font-size: 2.5rem;
-    font-family: "Syne Mono", monospace;
+    font-size: 5rem;
+    font-family: lexend, sans-serif;
     font-weight: 800;
     font-style: normal;
     padding:0.2em;
+    background: linear-gradient(to bottom, #000, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
 
     color: #ffffff;
-    text-shadow: #5f5f5f 2px 0 10px;
+    text-shadow: #3f3f3f 2px 0 10px;
 }
 
 .about-myself-container {
     padding: var(--primary-element-padding);
 }
 
-.hero-image{
-    display:none;
-}
 
-.hero-section p {
+
+#about-myself-para {
     margin-top: var(--primary-element-margin);
     padding: var(--primary-element-padding);
 
@@ -167,13 +178,10 @@ body {
 
     text-align: left;
     text-shadow: #343434 2px  0 3px;
-    transition: color, transform 200ms;
-    border-radius: 1rem;
-    /* Removed the border to see how good it looks while hovering */
-    box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px;
 
-    color:#929292;
+    color:#c4b0b0;
 }
+
 
 
 .tech-stack-container{
@@ -185,7 +193,7 @@ body {
     align-items: center;
 }
 
-.tech-stack-container h2 {
+/* .tech-stack-container h2 {
     font-family: "Funnel Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -193,7 +201,7 @@ body {
     font-size: 1.9rem;
     text-shadow: #696969 2px 0 10px;
     color: #fff;
-}
+} */
 
 .tech-stack-grid {
     width:80%;
@@ -220,10 +228,24 @@ body {
     gap:1rem
 }
 
-.my-education-section h2{
+/* .my-education-section h2{
     padding: var(--primary-element-padding);
     margin: 0 auto;
     font-size:2rem;
+    font-family: "Funnel Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+    color: #fff;
+    text-shadow: #696969 2px 0 10px;
+} */
+
+/* For section headings */
+.section-headings{
+    padding: var(--primary-element-padding);
+    margin: 0 auto;
+    font-size:2.5rem;
     font-family: "Funnel Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -334,14 +356,7 @@ body {
     gap: 1rem;
 }
 
-.individual-project-container a:hover {
-    color: #dbdbdb;
-}
 
-.individual-project-container:hover {
-    transform: translateY(-5px);
-    box-shadow: rgba(255, 255, 255, 0.35) 0px 10px 20px;
-}
 
 .individual-project-container h3 {
     font-family: "Funnel Sans", sans-serif;
@@ -381,53 +396,67 @@ body {
     }
     
     .about-myself-container{
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         
     }
 
-    .about-myself-container p{
-        margin-left: 1rem;
-        width: 40%;
-        text-align: justify;
-        transition: all 500ms ease-out;
-    }
-
-    .hero-section p:hover {
-        font-weight: 700;
-        color:#dbdbdb;
-        border: 2px solid white;
-        transform: scale(1.04);
+    #about-myself-para{
+        width: 50%;
+        text-align:left;
+        line-height: 3rem;
+        font-size: 2rem;
+        font-family: lexend, sans-serif;
     }
 
     .hero-image{
+        width: 100%;
+        border-radius: 50%;
+        background: transparent;
+        backdrop-filter: blur(5px);
+            filter: drop-shadow(0 10px 20px rgba(109, 109, 109, 0.5));
+
         display: block;
-        height: 260px;
-        width: 30%;
-        margin-top: 1rem;
-        margin-right: 1rem;
-        border:none;
+    }
+
+    .profile-card{
+        width:30%;
+        position: relative;
+    }
+
+    .contact-btn{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        font-size: 1.5em;
+        border-radius: 2.5rem;
+        color: #232323;
+        background-color: #d2d2d2;
+        backdrop-filter: blur(5px);
+        width: max-content;
+        transform: translateX(-50%) translateY(50%);
+        font-family: lexend, sans-serif;
+
+        opacity: 0;
+        padding: 1rem 1.5rem;
+        border: none;
         border-radius: 1rem;
-        transition: transform 500ms ease-out;
-        box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px;
-        object-fit: cover;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;      
 
     }
-
-    .hero-image:hover{
-        transform: scale(1.04);
-        border: 2px solid white;
-    }
-
+ 
     .tech-stack-grid {
         grid-template-columns: repeat(6, 1fr);
     }
 
     .tech-grid-items:hover {
         transform: scale(1.2);
-        box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px;
-        
+        /* box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px; */
+        filter: drop-shadow(0 10px 20px rgba(216, 205, 205, 0.5));
     }
 
     .education-description-container p{
@@ -436,6 +465,51 @@ body {
 } 
 
 
-/* Add animations for grid, aboutmyself, headings img */
+@media (hover: hover) {
+    .nav-items:hover {
+        color:#fff;
+        text-shadow: #5f5f5f 2px 0 10px;
+    }
+
+    .hamburger:hover span {
+        background: #dbdbdb;
+    }
+
+    .profile-card:hover .contact-btn {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .individual-project-container:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(255, 255, 255, 0.35) 0px 10px 20px;
+    }
+
+
+    .individual-project-container a:hover {
+        color: #dbdbdb;
+    }
+}
+
+
+
+
+/* Animation segment */
+/* Auto show animation for section headings and paragraphs */
+.auto-show-animation {
+    animation: autoShowAnimation both;
+    animation-timeline:view(70% 5%);
+}
+
+@keyframes autoShowAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
 /* For grid about my tech stack use the animation that deep used (figure out somehow)  */
