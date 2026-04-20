@@ -11,7 +11,7 @@
     <!-- Font imported from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bitcount+Grid+Single:wght@100..900&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Imperial+Script&family=Love+Light&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Stack+Sans+Notch:wght@200..700&family=Syne+Mono&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bitcount+Grid+Single:wght@100..900&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Imperial+Script&family=Lexend:wght@100..900&family=Love+Light&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Stack+Sans+Notch:wght@200..700&family=Syne+Mono&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 
 
     <!-- Favicon Setup -->
@@ -44,14 +44,12 @@
             <ul>
                 <li><a href="#home" class="nav-items">Home</a></li>
                 <li><a href="#projects" class="nav-items">Projects</a></li>
-                <li><a href="#contact" class="nav-items">Contact</a></li>
                 <li><a href="#blog" class="nav-items">Blog</a></li>
+                <li><a href="#contact" class="nav-items">Contact</a></li>
             </ul>
 
 
         </nav>
-
-        <hr>
 
     </header>
 
@@ -59,26 +57,31 @@
         
         <!-- This is the hero section of the website -->
         <section class="hero-section" id="#home">
-            <h1>Hi, I'm Dueben Presley Lewis</h1>
+            <h1 id="hero-heading">Hi, I'm Dueben Presley Lewis</h1>
 
             <!-- For about myself paragraph and a image -->
             <div class="about-myself-container">
-                <p>
-                    I’m Dueben Presley Lewis, an aspiring software engineer passionate about building clean, efficient, and user-focused applications. I enjoy working across web development and am actively expanding my skills in data structures, algorithms, and web-based technologies. I believe in writing readable code, learning continuously, and solving real-world problems through technology. With a strong interest in modern tools and open standards, my goal is to grow into a developer capable of building scalable products and eventually launching my own tech-driven ventures.
+
+                <p id="about-myself-para">
+                    I build things that live on the internet.
                 </p>
 
-                <img 
-                src="Assets/Images/pexels-themob000-28428592.jpg" 
-                alt="Attractive Image"
-                class="hero-image"
-                loading="lazy"
-                >
+                <div class="profile-card">
+                    <img 
+                        src="Assets/Images/developer image.PNG" 
+                        alt="Developer Image"
+                        class="hero-image"
+                        loading="lazy"
+                    >      
+                    
+                    <button class="contact-btn">Contact Me</button>
+                </div>
 
             </div>
 
             <!-- My tech stack container -->
             <div class="tech-stack-container">
-                <h2>Tech That I've Used</h2>
+                <h2 class="section-headings auto-show-animation">Tech That I've Used</h2>
 
                 <div class="tech-stack-grid">
                     <img src="Assets/Images/html icon.png" 
@@ -105,7 +108,7 @@
  
         <!-- This is the education section -->
         <section class="my-education-section">
-            <h2>Education</h2>
+            <h2 class="section-headings">Education</h2>
 
             <div class="main-education-container">
                 
@@ -219,7 +222,11 @@
                     <!-- Card 1 -->
                     <div class="individual-project-container">
                         <h3>
-                            <a href="https://github.com/duebenpresleylewis/portfolio-website.git">Personal Portfolio Website</a>
+                            <a href="https://github.com/duebenpresleylewis/portfolio-website.git"
+                                target = "_blank"
+                                rel="noopener noreferrer"
+                                >Personal Portfolio Website
+                            </a>
                         </h3>
 
                         <p>
@@ -253,14 +260,7 @@
     </footer>
 
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const menu = document.querySelector(".nav-container ul");
-
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("active");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
