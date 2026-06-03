@@ -1,0 +1,146 @@
+.header-container{
+    /* width: 100%; */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    /* Transparent gradient */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.1)
+    );
+
+    backdrop-filter: blur(5px);
+    transition: all 0.4s ease;
+
+    /* Smooth bottom fade instead of <hr> */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-container.scrolled {
+    background: rgba(0, 0, 0, 0.60);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container{
+    position: relative; /* VERY IMPORTANT */
+    margin: 0 auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3em;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+
+    color: #fff;
+
+    text-shadow: #5f5f5f 2px 0 10px;
+    padding:0.2em;
+}
+
+.nav-container ul{
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: max-content; /* prevents forced width */
+    min-width: 160px;
+
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+
+    background: #111;
+    padding: var(--primary-element-padding);
+    border-radius: 8px;
+}
+
+.nav-container ul.active {
+    display: flex;
+}
+
+.nav-items{
+    font-size: 1.6em;
+    padding: 1rem;
+      font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    color: #c0c0c0;
+    /* fix karo */
+    transition: color 200ms;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
+/* hover related */
+@media (hover: hover) {
+    .nav-items:hover {
+        color:#fff;
+        text-shadow: #5f5f5f 2px 0 10px;
+    }
+
+    .hamburger:hover span {
+        background: #dbdbdb;
+    }
+}
+
+
+
+
+/* media queries */
+@media screen and (min-width:768px) {
+    .nav-container ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    /* Media query for hamburger menu */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-container ul {
+        position: static;
+        flex-direction: row;
+        background: none;
+        padding: 0;
+        display: flex;
+    }
+
+}
+
+
