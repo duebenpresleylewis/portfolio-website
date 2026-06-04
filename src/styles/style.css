@@ -4,6 +4,7 @@
     --primary-element-padding:1rem;
     --primary-main-heading-font-size:5rem;
     --primary-paragraph-font-size:1rem;
+    --primary-background-color:#000;
 }
 
 *{
@@ -16,66 +17,15 @@
 }
 
 body {
-    background:linear-gradient(to bottom, #000, #323232);
-
+    /* background: var(--primary-background-color); */
     /* overflow-x: hidden; */
 }
 
 /* Main Container related designing */
 .main-container {
-    padding: var(--primary-element-padding);
+    background-color: var(--primary-background-color);
     width: 100%;
 }
-
-.hero-section {
-    padding: var(--primary-element-padding);
-    width: 100%;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-}
-
-#hero-heading {
-    text-align: center;
-    font-size: 5rem;
-    font-family: lexend, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    padding:0.2em;
-    background: linear-gradient(to bottom, #000, #ffffff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
-
-    color: #ffffff;
-    text-shadow: #3f3f3f 2px 0 10px;
-}
-
-.about-myself-container {
-    padding: var(--primary-element-padding);
-}
-
-
-
-#about-myself-para {
-    margin-top: var(--primary-element-margin);
-    padding: var(--primary-element-padding);
-
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-
-    font-size:1.2rem;
-
-    text-align: left;
-    text-shadow: #343434 2px  0 3px;
-
-    color:#c4b0b0;
-}
-
 
 
 .tech-stack-container{
@@ -269,61 +219,9 @@ body {
     color: #ffffff;
 }
 
+
+
 @media screen and (min-width:768px) {
-    
-    .about-myself-container{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    #about-myself-para{
-        width: 50%;
-        text-align:left;
-        line-height: 3rem;
-        font-size: 2rem;
-        font-family: lexend, sans-serif;
-    }
-
-    .hero-image{
-        width: 100%;
-        border-radius: 50%;
-        background: transparent;
-        backdrop-filter: blur(5px);
-            filter: drop-shadow(0 10px 20px rgba(109, 109, 109, 0.5));
-
-        display: block;
-    }
-
-    .profile-card{
-        width:30%;
-        position: relative;
-    }
-
-    .contact-btn{
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        font-size: 1.5em;
-        border-radius: 2.5rem;
-        color: #232323;
-        background-color: #d2d2d2;
-        backdrop-filter: blur(5px);
-        width: max-content;
-        transform: translateX(-50%) translateY(50%);
-        font-family: lexend, sans-serif;
-
-        opacity: 0;
-        padding: 1rem 1.5rem;
-        border: none;
-        border-radius: 1rem;
-        cursor: pointer;
-        font-weight: 600;
-        transition: all 0.3s ease;      
-
-    }
  
     .tech-stack-grid {
         grid-template-columns: repeat(6, 1fr);
@@ -342,12 +240,6 @@ body {
 
 
 @media (hover: hover) {
-
-    .profile-card:hover .contact-btn {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
-
     .individual-project-container:hover {
         transform: translateY(-5px);
         box-shadow: rgba(255, 255, 255, 0.35) 0px 10px 20px;
@@ -362,22 +254,5 @@ body {
 
 
 
-/* Animation segment */
-/* Auto show animation for section headings and paragraphs */
-.auto-show-animation {
-    animation: autoShowAnimation both;
-    animation-timeline:view(70% 5%);
-}
-
-@keyframes autoShowAnimation {
-    from{
-        opacity: 0;
-        transform: translateY(200px) scale(0.3);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
 
 /* For grid about my tech stack use the animation that deep used (figure out somehow)  */

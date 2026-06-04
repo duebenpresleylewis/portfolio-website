@@ -6,13 +6,14 @@
     <title>Dueben Presley Lewis | Software Engineer</title>
 
     <!-- CSS Linked -->
-     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <!-- Font imported from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bitcount+Grid+Single:wght@100..900&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Imperial+Script&family=Lexend:wght@100..900&family=Love+Light&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Roboto:ital,wght@₀,1₀₀..9₀₀;₁,1₀₀..9₀₀&family=Rouge+Script&family=Stack+Sans+Notch:wght@2₀₀..7₀₀&family=Syne+Mono&family=Tangerine:wght@4₀₀;7₀₀&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&family=Bitcount+Grid+Single:wght@100..900&family=Bungee+Tint&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Imperial+Script&family=Lexend:wght@100..900&family=Love+Light&family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nabla&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oxanium:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&family=Stack+Sans+Notch:wght@200..700&family=Syne+Mono&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 
 
     <!-- Favicon Setup -->
@@ -29,84 +30,92 @@
 </head>
 
 <body>
-    <!-- <h1 class="name">Dueben Presley Lewis</h1> -->
-    <header class="header-container">
-
-        <nav class="nav-container">
-
-            <a href="#home" class="logo">Dueben</a>
-
-            <button class="hamburger"   aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul>
-                <li><a href="#home" class="nav-items">Home</a></li>
-                <li><a href="#projects" class="nav-items">Projects</a></li>
-                <li><a href="#blog" class="nav-items">Blog</a></li>
-                <li><a href="#contact" class="nav-items">Contact</a></li>
-            </ul>
-
-
-        </nav>
-
-    </header>
 
     <main class="main-container">
         
-        <!-- This is the hero section of the website -->
-        <section class="hero-section" id="#home">
-            <h1 id="hero-heading">Hi, I'm Dueben Presley Lewis</h1>
+            <!-- <h1 class="name">Dueben Presley Lewis</h1> -->
+        <header class="header-container">
 
+            <nav class="nav-container">
+
+                <a href="#home" class="logo">Dueben</a>
+
+                <button class="hamburger"   aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul>
+                    <li><a href="#home" class="nav-items">Home</a></li>
+                    <li><a href="#projects" class="nav-items">Projects</a></li>
+                    <li><a href="#blog" class="nav-items">Blog</a></li>
+                    <li><a href="#contact" class="nav-items">Contact</a></li>
+                </ul>
+
+
+            </nav>
+
+        </header>
+
+
+
+        <!-- This is the hero section of the website -->
+        <section class="hero-section" id="home">
             <!-- For about myself paragraph and a image -->
             <div class="about-myself-container">
 
-                <p id="about-myself-para">
-                    I build things that live on the internet.
-                </p>
-
                 <div class="profile-card">
+
                     <img 
-                        src="../Assets/Images/developer image.PNG" 
+                        src="../Assets/Images/dueben-image.png" 
                         alt="Developer Image"
                         class="hero-image"
                         loading="lazy"
                     >      
-                    
-                    <button class="contact-btn">Contact Me</button>
+
+                    <h1 id="hero-heading">
+                        Dueben Presley Lewis
+                    </h1>
+
+                    <p id="about-myself-para">
+                        I build things that live on the internet.
+                    </p>
+
                 </div>
 
             </div>
 
-            <!-- My tech stack container -->
-            <div class="tech-stack-container">
-                <h2 class="section-headings auto-show-animation">Tech That I've Used</h2>
+        </section>
 
-                <div class="tech-stack-grid">
-                    <img src="../Assets/Images/html icon.png" 
-                    alt="HTML Icon" class="tech-grid-items">
 
-                    <img src="../Assets/Images/css icon.png" 
-                    alt="CSS Icon" class="tech-grid-items">
+        <!-- My tech stack container -->
+        <section class="tech-stack-container">
+            <h2 class="section-headings auto-show-animation">Tech That I've Used</h2>
 
-                    <img src="../Assets/Images/javascript icon.png" 
-                    alt="Javascript Icon" class="tech-grid-items">
+            <div class="tech-stack-grid">
+                <img src="../Assets/Images/html icon.png" 
+                alt="HTML Icon" class="tech-grid-items">
 
-                    <img src="../Assets/Images/c icon.png" 
-                    alt="C Icon" class="tech-grid-items">
+                <img src="../Assets/Images/css icon.png" 
+                alt="CSS Icon" class="tech-grid-items">
 
-                    <img src="../Assets/Images/cpp icon.png" 
-                    alt="C++ Icon" class="tech-grid-items">
+                <img src="../Assets/Images/javascript icon.png" 
+                alt="Javascript Icon" class="tech-grid-items">
 
-                    <img src="../Assets/Images/java icon.png" 
-                    alt="Java Icon" class="tech-grid-items">
+                <img src="../Assets/Images/c icon.png" 
+                alt="C Icon" class="tech-grid-items">
 
-                </div>
+                <img src="../Assets/Images/cpp icon.png" 
+                alt="C++ Icon" class="tech-grid-items">
+
+                <img src="../Assets/Images/java icon.png" 
+                alt="Java Icon" class="tech-grid-items">
+
             </div>
         </section>
  
+
         <!-- This is the education section -->
         <section class="my-education-section">
             <h2 class="section-headings">Education</h2>
@@ -211,6 +220,7 @@
             <hr> 
         </div>
         </section>
+
 
         <!-- This is the project section  -->
          <section class="projects-section">
