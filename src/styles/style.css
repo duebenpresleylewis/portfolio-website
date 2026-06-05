@@ -18,18 +18,24 @@
 
 body {
     /* background: var(--primary-background-color); */
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 /* Main Container related designing */
-.main-container {
+.first-container {
     background-color: var(--primary-background-color);
+}
+
+
+
+.main-container {
     width: 100%;
 }
 
 
 .tech-stack-container{
-    margin-top: var(--primary-element-margin);
+    background-color: #c9c9c9;
+    height:50vh;
     padding: var(--primary-element-padding);
     display: flex;
     flex-direction: column;
