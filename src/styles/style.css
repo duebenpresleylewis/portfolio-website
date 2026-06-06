@@ -227,22 +227,7 @@ body {
 
 
 
-@media screen and (min-width:768px) {
- 
-    .tech-stack-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
 
-    .tech-grid-items:hover {
-        transform: scale(1.2);
-        /* box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px; */
-        filter: drop-shadow(0 10px 20px rgba(216, 205, 205, 0.5));
-    }
-
-    .education-description-container p{
-        max-width: 50%;
-    }  
-} 
 
 
 @media (hover: hover) {
@@ -281,3 +266,21 @@ body {
 
 
 /* For grid about my tech stack use the animation that deep used (figure out somehow)  */
+
+
+@media screen and (min-width:768px) {
+ 
+    .tech-stack-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .tech-grid-items:hover {
+        transform: scale(1.2);
+        /* box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px; */
+        filter: drop-shadow(0 10px 20px rgba(216, 205, 205, 0.5));
+    }
+
+    .education-description-container p{
+        max-width: 50%;
+    }  
+} 
