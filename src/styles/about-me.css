@@ -1,0 +1,54 @@
+@media screen and (max-width:768px) {
+
+    .about-me-para{
+        width:100%;
+    }       
+}
+
+.about-me-top {
+    width: 100%;
+    background: blue;
+}
+
+.about-me-para {
+    padding: var(--primary-element-padding) 0;
+    width:60%;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-family: 'nunito sans', sans-serif;
+    font-weight: 600;
+    background: red;
+    margin:0;
+}
+
+.about-me-section {
+    width:90vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding:var(--primary-element-padding);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: violet;
+}
+
+.about-me-heading {
+    font-size:clamp(2.5rem, 6vw, 6.5rem);
+    font-weight: 800;
+    font-family: 'oxznium', sans-serif;
+    padding: var(--primary-element-padding) 0;
+    background: green;
+}
+
+
+.about-me-bottom{
+    align-self: flex-end;
+    background: yellow;
+}
+
+#about-me-end {
+    font-size:clamp(2.5rem, 6vw, 6.5rem);
+    font-weight: 800;
+    font-family: 'oxznium', sans-serif;
+    padding: var(--primary-element-padding) 0;
+}
