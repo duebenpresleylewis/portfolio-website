@@ -29,7 +29,7 @@ body {
 
 
 .main-container {
-    width: 100%;
+    width: 100vw;
 }
 
 
@@ -227,22 +227,7 @@ body {
 
 
 
-@media screen and (min-width:768px) {
- 
-    .tech-stack-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
 
-    .tech-grid-items:hover {
-        transform: scale(1.2);
-        /* box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px; */
-        filter: drop-shadow(0 10px 20px rgba(216, 205, 205, 0.5));
-    }
-
-    .education-description-container p{
-        max-width: 50%;
-    }  
-} 
 
 
 @media (hover: hover) {
@@ -259,6 +244,43 @@ body {
 
 
 
+/* Animation segment */
+/* Auto show animation for section headings and paragraphs */
+.auto-show-animation {
+    animation: autoShowAnimation both;
+    animation-timeline:view(70% 5%);
+}
+
+@keyframes autoShowAnimation {
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
 
 
 /* For grid about my tech stack use the animation that deep used (figure out somehow)  */
+
+
+@media screen and (min-width:768px) {
+ 
+    .tech-stack-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .tech-grid-items:hover {
+        transform: scale(1.2);
+        /* box-shadow: rgba(235, 235, 235, 0.25) 0px 14px 28px, rgba(25, 25, 25, 0.22) 0px 10px 10px; */
+        filter: drop-shadow(0 10px 20px rgba(216, 205, 205, 0.5));
+    }
+
+    .education-description-container p{
+        max-width: 50%;
+    }  
+} 
